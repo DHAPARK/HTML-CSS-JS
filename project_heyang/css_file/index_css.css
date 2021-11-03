@@ -1,0 +1,99 @@
+#index_body_container{
+    width:1130px;
+    height:75%;
+    /*background-color:yellow;*/
+}
+
+#index_body_container table{
+    margin:auto;
+    /*background-color:black;*/
+    width:80%;
+    /*height:100%;*/
+    border-spacing:0 20px;
+}
+#index_body_container table tr{
+
+}
+#index_body_container table tr td{
+    background-color:#EEE6C4;
+    border-top-left-radius: 10px;
+}
+
+
+/*footer는 view_board.html도 공용으로 사용할것*/
+#footer{
+    width:1230px;
+    height:110px;
+    /*background-color:green;*/
+}
+#footer p{
+    text-align:center;
+    margin:0 auto;
+    font-size:24px;
+}
+#footer_inner_one{
+    height:50px;
+}
+#footer_inner_two{
+    height:50px;
+}
+/*
+#footer_inner_div{
+    text-align:center;
+    margin-top:50px;
+    margin:0 auto;
+    width:80%;
+    height:50px;
+}
+*/
+.tr_inner_container{
+    width:900px;
+    height:70px;
+    margin:0 auto;
+    display:block;
+}
+
+.tr_inner_up_div{
+    display:block;
+    width:840px;
+    border-bottom:1px solid gray;
+    margin:0 auto;
+    height:30px;
+    background-color:white;
+}
+
+.tr_inner_under_div{
+    
+    display:block;
+    width:840px;
+    height:37px;
+    margin:0 auto;
+}
+
+
+.board_kinds{
+    margin-right:30px;
+    width:40px;
+    height:30px;
+}
+.board_title{
+    width:250px;
+    height:30px;
+    margin-right:330px;
+}
+.board_writer{
+    width:60px;
+    height:30px;
+}
+.board_date{
+    width:90px;
+    height:30px;
+}
+.board_view_cnt{
+    width:30px;
+    height:30px;
+}
+
+.tr_inner_under_div_contents{
+    height:37px;
+}
