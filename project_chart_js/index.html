@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<canvas id="example" width="200" height="200">
+    This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+
+
+
+<style>
+   
+    #under_cover_div p{
+        opacity:0.5;
+    }
+    p{
+        text-align:center;
+    }
+    #container{
+        display:block;
+        width:800px;
+        height:750px;
+        float:left;
+        background-color:lightgrey;
+        
+    }
+    #js_chart{
+        width:450px;
+        height:450px;
+        background-color:white;
+        margin-left:20px;
+        margin-top:20px;
+    }
+    #inner_jschart_rightboard div{
+        float:left;
+    }
+    #inner_jschart_rightboard{
+        width:800px;
+        height:450px;
+    }
+    #right_board{
+        margin-top : 20px;
+        margin-left : 50px;
+        margin-right : 10px;
+        width:260px;
+        height:450px;
+        background-color:white;
+    }
+    
+    #js_chart_inner_chart{
+        width:450px;
+        height:350px;
+        background-color:white;
+    }
+    #js_chart_inner_select{
+        width:450px;
+        height:70px;
+        
+    }
+
+    #law{
+        padding-left:10px;
+        padding-top:10px;
+        border-bottom:1px solid gray;
+        background-color:white;
+        width:240px;
+        height:100px;
+    }
+    #chat_board{
+        padding-top:20px;
+        padding-left:20px;
+        background-color:white;
+        width:240px;
+        height:280px;
+        border-bottom:1px solid gray;
+    }
+    #under_cover_div{
+        border-top:1px solid gray;
+        
+        width:760px;
+        height:260px;
+        margin-left:20px;
+        margin:0 auto;
+        margin-top:80px;
+    }
+    #left_covid_ment{
+        width: 450px;
+        height:130px;
+        border-bottom:1px solid gray;
+
+    }
+    #left_covid_ment p {
+        margin:0;
+        padding:0;
+        text-align:left;
+        font-size:14px;
+    }
+    #left_covid_ment:first-child{
+        margin-top:20px;
+    }
+    #right_comp_info{
+        margin-top:20px;
+        width:280px;
+        height:140px;
+        margin-left:30px;
+        
+    }
+    #under_cover_div div{
+        float:left;
+    }
+    #right_comp_info p{
+        margin:0px;
+        padding:0px;
+        text-align:left;
+    }
+    #uunder{
+        width:540px;
+        height:50px;
+        
+    }
+    #uunder p{
+        text-align:left;
+        margin:0px;
+        padding:0px;
+    }
+
+    select{
+        margin-top:15px;
+        margin-left:15px;
+        border-radius:30px;
+        width:100px;
+        height:50px;
+    }
+    #law:first-child{
+        margin-top:5px;
+    }
+    
+    #law p{
+        
+        marign:0px;
+        padding:0px;
+        text-align:left;
+        font-size:10px;
+    }
+    #chat_board p{
+        text-align:left;
+        margin:0px;
+        padding:0px;
+    }
+    #right_comp_info p{
+        font-size:14px;
+    }
+</style>
+</head>
+<body>
+    
+
+    <div id="container">
+        <div id="inner_jschart_rightboard">
+            <!--여기 왼쪽 차트-->
+            <div id="js_chart">
+                <!--div안 백신,일별,기간, 옵션선택-->
+                <div id="js_chart_inner_select">
+                    <select name="백신 전체">
+                        <option value="1">백신 전체</option>
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                    </select>
+                    <select name="종류 일별">
+                        <option value="1">종류 일별</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <select name="기간 1주">
+                        <option value="1">기간 1주</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <!--div안 백신,일별,기간,옵션 선택 끝-->
+                <!--js_chart_inner_chart-->
+                <div id="js_chart_inner_chart">
+                    
+
+
+
+
+                    <div style="width:450px;height:350px;">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <!--js_chart_inner_chart끝-->
+                <p>[ 백신 접종자 현황 ]</p>
+            </div>
+            <!--여기 왼쪽 차트-->
+            <!--여기 오른쪽 채팅게시판-->
+            <div id="right_board">
+            <!--오른위 법령-->
+                <div id="law">
+                    <p> * 범죄/헌법에 위반되는 행위 처벌</p>
+                    <p> * 사회 통합 및  사회질서를 저해하는 행위 처벌</p>
+                    <p> * 커뮤니티 사이트 통합 운영정책(2021.10.07 개정)</p>
+                </div>
+            <!--오른위 법령끝-->
+            <!--오른위 채팅판-->
+                <div id="chat_board">
+                    <p>7124:오늘도 할일 있어~</p>
+                    <p>7124:오늘도 할일 있어~</p>
+                    <p>7124:오늘도 할일 있어~</p>
+                    <p>7124:오늘도 할일 있어~</p>
+                    <p>7124:오늘도 할일 있어~</p>
+                    <p>7124:오늘도 할일 있어~</p>
+                   
+                </div>
+            <!--오른위 채팅판끝-->
+                <p>< 1 2 3 4 ></p>
+            </div>
+            <!--여기 오른쪽 채팅게시판-->
+        </div>
+        <!--그..사각형 반으로나눠 위쪽 js_chart랑 right_board 커버하는 div-->
+        <!--아래 전역을 커버하는 div-->
+        <div id="under_cover_div">
+            <!--아래 왼쪽 밑줄 밑 코로나종합 포털 사이트-->
+            <div id="left_covid_ment">
+                <p>코로나 (covid-19) 종합 포털 사이트</p><br>
+                <p>대표자 : 익명</p>
+                <p>대리 : 익명</p>
+                <p>인턴 : 익명</p>
+                <p>사업자등록번호 : 110-81-95574</p>
+            </div>
+            <!--오른쪽 회사info-->
+            <div id="right_comp_info">
+                <p>주소 : 서울특별시 구로구 경인로 445</p>
+                <p>전화 : 02-2610-1700</p>
+                <p>메일 : skehahffk@naver.com</p>
+                <br>
+                <p>평일 : 10:00~19:00 (점심시간 11:00~18:00)</p>
+                <p>토/일,공휴일 휴무</p>
+            </div>
+            <!--오른쪽 회사info끝-->
+            <!--아래 왼쪽 밑줄 밑 코로나종합 포털 사이트끝-->
+            <!--맨아래 시작 현재 문의~-->
+            <div id="uunder">
+                <p>현재 문의가 많아 상담사가 연결이 지연되고 있습니다.</p>
+                <p>메일로 남겨주시면 차례로 답변해드리겠습니다. 시간양해 부탁드립니다.</p>
+            </div>
+            <!--맨아래 끝-->
+        </div>
+        <!--아래 전역을 커버하는 div 끝-->
+
+    </div>
+
+
+
+</body>
+
+
+<script>
+    var example = document.getElementById('example');
+    var context = example.getContext('2d');
+    context.fillStyle = 'white';
+    context.fillRect(30, 30, 50, 50);
+</script>
+
+
+<script>
+// 우선 컨텍스트를 가져옵니다. 
+var ctx = document.getElementById("myChart").getContext('2d');
+/*
+- Chart를 생성하면서, 
+- ctx를 첫번째 argument로 넘겨주고, 
+- 두번째 argument로 그림을 그릴때 필요한 요소들을 모두 넘겨줍니다. 
+*/
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["09/17", "09/18", "09/19", "09/20", "09/21", "09/23","09/23"],
+        datasets: [{
+            label: '',
+            data: [1101114, 578680, 45221, 31255, 10655, 43191, 936055],
+            backgroundColor: [
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)'
+            ],
+            borderColor: [
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        maintainAspectRatio: false, // default value. false일 경우 포함된 div의 크기에 맞춰서 그려짐.
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }],
+            xAxes:[{
+                barPercentage:0.2
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+</html>
