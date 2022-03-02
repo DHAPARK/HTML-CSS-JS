@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./playaudio2.js"></script>
+
+    <style>
+        #container{
+            display:flex;
+            background-color:brown;
+            width:100%;
+            height:500px;
+        }
+        #semicont{
+            background-color:white;
+            width:40%;
+            height:80%;
+            margin:0 auto;
+            display:inline-block;
+        }
+        #imgArea{
+            display:block;
+            
+            width:100%;
+            height:100%;
+        }
+        #playbtn{
+            margin:0 auto;
+        }
+        #playbtncoverdiv{
+            background-color:black;
+            
+            display:block;
+            width:17%;
+        }
+        #sliceArea{
+            background-color:pink;
+            
+        }
+        #bottomcont{
+            width:100%;
+            display:flex;   
+        }
+        #imgelement{
+            width:100%;
+            height:100%;
+        }
+        #musicslice{
+            
+        }
+        #Test_Audio{
+            opacity:0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="semicont">
+            <div id="imgArea">
+                
+                
+                <img src="" id="imgelement"/>
+            </div>
+            
+
+
+            <div id="bottomcont">
+                <center><div id="playbtncoverdiv"><button onclick="return playmusic();" id="playbtn">play audio</button></div></center>
+                <div id="sliceArea"><input id="musicslice" type="range" value="0" min="0" max="0"></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <p> select time duration </p>
+    <button id="inputTDarr1" value=5 type="text" onclick="btn1act();">5</button>
+    <button id="inputTDarr2" value=10 type="text" onclick="btn2act();">10</button>
+    <button id="inputTDarr3" value=15 type="text" onclick="btn3act();">15</button>
+    <button id="inputTDarr4" value=20 type="text" onclick="btn4act();">20</button>
+    <button id="inputTDarr5" value=25 type="text" onclick="btn5act();">25</button>
+    <button id="inputTDarr6" value=30 type="text" onclick="btn6act();">30</button>
+
+    <p id="selectedduration">selected durtion : </p>
+
+    <!--http://www.tcpschool.com/html-tags/audio 출처-->
+    <p><input id="inputTD" value="0" type="hidden" placeholder="input timeduration"/></p>
+
+
+    <button onclick="location.reload();">refresh</button>
+
+
+    <audio id="Test_Audio" controls>
+        <source class="srcaudio" src="" 
+                type="audio/ogg">
+        <source class="srcaudio" src="" 
+                type="audio/mpeg">
+        <source class="srcaudio" src="" 
+                type="audio/mp3">
+    </audio>
+    
+</body>
+</html>
