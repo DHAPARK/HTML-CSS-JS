@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            border: 2px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:400px;height:400px;border:3px solid brown;margin-top:10px;margin-left:50px;">
+        <div style="width:90%;height:73%;margin:0 auto;">
+            <center><p>이미지 변경하기</p></center>
+            <hr>
+        
+        </div>
+        <img id="imgele" style="border:1px dashed black;" src="./img.PNG" onmouseover="change();"/>
+    </div>
+</body>
+<script>
+    function change(){
+        document.getElementById("imgele").src="./img2.PNG";
+    }
+</script>
+
+</html>

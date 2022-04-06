@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .r{
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="width:500px;height:500px;margin:0 auto;">
+        <div class="r" style="width:30%;height:30%;border-radius:50%;background-color:pink;">
+            <center><div style="display:block;padding-top:25%;font-size:50px;"onmouseover="change(this);">Click</div></center>
+        </div>
+        <div class="r" style="width:30%;height:30%;border-radius:50%;background-color:red;">
+            <center><div style="display:block;padding-top:25%;font-size:50px;"onmouseover="change(this);">Click</div></center>
+        </div>
+        <div class="r" style="width:30%;height:30%;border-radius:50%;background-color:green;">
+            <center><div style="display:block;padding-top:25%;font-size:50px;"onmouseover="change(this);">Click</div></center>
+        </div>
+    </div>
+<script>
+    function change(obj){
+        obj.style.color = "white";
+    }
+</script>
+
+</body>
+</html>

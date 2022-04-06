@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width:400px;
+            height:25px;
+            background-color:green;
+        }
+        ul{
+            list-style:none;
+        }
+        a{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id ="container">
+        <nav>
+            <ul style="float:left; margin:0; padding:0;">
+                <li>
+                <a onmouseover="change(this);">Home</a>
+                <a onmouseover="change(this);">Espresso</a>
+                <a onmouseover="change(this);">Cappuccino</a>
+                <a onmouseover="change(this);">Cafe Latte</a>
+                <a onmouseover="change(this);">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        function change(obj){
+            obj.style.color='red';
+        }
+    </script>
+</body>
+</html>
