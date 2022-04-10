@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서/자소서</title>
+    <script>
+        
+    </script>
+    <style>
+        ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        li{
+            margin:0;
+            padding:0;
+        }
+        #container{
+            padding-top:30px;
+            width:800px;
+            height:800px;
+            border: 1px solid black;
+            margin:0 auto;
+        }
+        #topSection{
+            width:100%;
+            height:25%;
+            display:flex;
+            
+        }
+        #leftInTopSection{
+            width:65%;
+            height:100%;
+            
+            display:flex;
+        }
+        #rightInTopSection{
+            width:35%;
+            height:100%;
+        }
+        #rightInTopSection h1{
+            color:brown;
+        }
+
+
+        #middleSection{
+            width:100%;
+            height:50%;
+            
+        }
+        #educationInMiddleSection{
+            width:60%;
+            height:35%;
+            
+            margin:0 auto;
+        }
+        #experienceInMiddleSection{
+            width:60%;
+            height:35%;
+            
+            margin:0 auto;
+        }
+        #portfolioLinksInMiddleSection{
+            border: 1px dashed black;
+            width:60%;
+            height:25%;
+            margin: 0 auto;
+        }
+        #portfolioLinksInMiddleSection h2{
+            margin:0px;
+            padding:0px;
+        }
+
+
+
+        #bottomSection{
+            width:100%;
+            height:25%;
+            
+        }
+        #pie-chart{
+            width: 20%;
+            height:60%;   
+        }
+
+        #pictureMargin{
+            width:30%;
+            height:100%;
+            
+        }
+        #picture{
+            width:30%;
+            height:100%;
+            
+        }
+        #nameJobAddress{
+            width:30%;
+            height:100%;
+            margin-left:10px;
+            font-size:5px;
+        }
+        #nameJobAddress h1{
+            font-size:30px;
+        }
+        #teckdiv{
+            display:flex;
+        }
+        #teckdiv ul{
+            margin-left:10px;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+        <section id="topSection">
+            <div id="leftInTopSection">
+
+                <div id="pictureMargin"></div>
+                <div id="picture">
+                    <img style="width:100%;height:100%;" src="./img/pika.png"/>
+                </div>
+
+                <div id="nameJobAddress">
+                    <h1>홍길동</h1>
+                    <p>프론트엔드개발자 <br> UI개발자 <br>백앤드개발자</p>
+                    <p>서울특별시 거주 <br> 2022 /04~</p>
+                </div>
+            </div>
+            <div id="rightInTopSection">
+                <h1>e-Mail</h1>
+                <p>pika@pika.com</p>
+                <h1>Phone</h1>
+                <p>010-1111-2222</p>
+            </div>
+
+        </section>
+
+
+
+        <section id="middleSection">
+            <div id="educationInMiddleSection">
+                <h2 style="color:darkblue">EDUCATION</h2>
+                <ul>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx대학교 진학 및 졸업</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx고등학교 진학 및 졸업</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx중학교 진학 및 졸업</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx초등학교 진학 및 졸업</li>
+                </ul>
+            </div>
+            <div id="experienceInMiddleSection">
+                <h2 style="color:crimson">EXPERIENCE</h2>
+                <ul>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx회사 | xx부서 xx프로젝트 참여</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx연구소 | xx분야 xx논문참여</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx산업체 | xx학회 연구결과 발표</li>
+                    <li>20xx.xx ~ 20xx.xx:  < - >  xx국가 | xx사업 추진</li>
+                </ul>
+            </div>
+            <div id="portfolioLinksInMiddleSection">
+                <h2 style="color:darkorchid">PORTFOLIO LINKS</h2>
+                <ul>
+                    <li>BLOG. xxxx@naver.com</li>
+                    <li>GitHub. xxxx@github.com</li>
+                    <li>Comp. xxxx@comp.com</li>
+                    
+                </ul>
+            </div>
+        </section>
+
+
+        
+
+        <section id="bottomSection">
+            <h2 style="color:red">TECHNICAL SKILLS</h2>
+            <div id="teckdiv">
+                <ul>
+                    <li>_ REACT 上</li>
+                    <li>_ REACT NATIVE 下</li>
+                    <li>_ JAVA 下</li>
+                </ul>
+                <ul>
+                    <li>_ REACT 上</li>
+                    <li>_ REACT NATIVE 中</li>
+                    <li>_ JAVA 下</li>
+                </ul>
+                <ul>
+                    <li>_ REACT 上</li>
+                    <li>_ REACT NATIVE 上</li>
+                    <li>_ JAVA 中</li>
+                </ul>
+                <ul>
+                    <li>_ REACT 上</li>
+                    <li>_ REACT NATIVE 中</li>
+                    <li>_ JAVA 下</li>
+                </ul>
+                <ul>
+                    <li>_ REACT 上</li>
+                    <li>_ REACT NATIVE 上</li>
+                    <li>_ JAVA 下</li>
+                </ul>
+               
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
