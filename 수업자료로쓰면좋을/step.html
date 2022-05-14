@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width:700px;
+            height:650px;
+            margin:0 auto;
+        }
+        #TopImgAndSearchInput{
+            width:60%;
+            height:50px;
+            display:flex;
+        }
+        #TopImgLeftSide{
+            width:30%;
+            height:100%;
+            /*background-color:green;*/
+            
+        }
+        #TopImgRightSide{
+            width:68%;
+            padding-left:2%;
+            height:80%;
+            background-color:rgba(232,225,225);
+            border-radius:10px;
+            margin-top:11%;
+            display:flex;
+        }
+        #TopImg{
+            width:100%;
+            height:250%;
+        }
+        #inputTag{
+            width:90%;
+            height:100%;
+            
+        }
+        #glassImg{
+            width:10%;
+            height:100%;
+            
+        }
+        #inputOne{
+            margin-top:3%;
+            width:100%;
+            height:60%;
+            border-radius:10px;
+            border: none; 
+            background: transparent;
+        }
+        #glassImgImg{
+            width:100%;
+            height:80%;
+            padding-top:10%;
+            border:none;
+            border-radius:10px;
+        }
+        #TopUnderDiv{
+            width:50%;
+            height:50px;
+            
+            margin-top:8%;
+            margin-left:1%;
+            display:flex;
+        }
+        #blackbox{
+            width:4%;
+            height:30%;
+            margin-top:6%;
+            background-color:black;
+            margin-right:2%;
+            border-radius:3px;
+        }
+
+        #cate{
+            width:15%;
+            margin-left:1%;
+            margin-top:5%;
+            height:30px;
+            
+        }
+        #cates{
+            
+            margin-left:1%;
+            width:99%;
+            height:30px;
+            background-color:#e0daeb;
+            border-radius:5px;
+        }
+        a:link { color: black; text-decoration: none;}
+        a:visited { color: black; text-decoration: none;}
+        a:hover { color: black; text-decoration: underline;}
+        li{
+            list-style:none;
+        }
+        ul{
+            display:flex;
+        }
+        li{
+            margin-right:1%;
+        }
+        .inner-menu{
+            padding-top:6px;
+        }
+
+        #writeTitle{
+            width:15%;
+            margin-left:1%;
+            margin-top:5%;
+            height:30px;
+            
+        }
+        #writeBox{
+            width:99%;
+            height:400px;
+            border:2px solid rgba(237,237,239);
+            margin-left:1%;
+            display:flex;
+        }
+        #title{
+            width:7%;
+            margin-left:1%;
+            height:30px;
+            
+        }
+        #inputUnderDiv{
+            width:90%;
+            height:30px;
+            border-radius:15px;
+            margin-top:2%;
+            background-color:rgba(237,237,239);
+        }
+        #inputUnderTitle{
+            
+            width:100%;
+            height:100%;
+            border-radius:15px;
+            border: none; 
+            background: transparent;
+        }
+        #buttons{
+            margin-left:1%;
+            width:99%;
+            height:50px;
+            
+            padding-top:5px;
+        }
+        #leftbtn{
+            width:45%;
+            height:40px;
+            margin-right:9%;
+            border:none;
+            border-radius:20px;
+            background-color:rgba(237,237,239);
+        }
+        #rightbtn{
+            width:45%;
+            height:40px;
+            border:none;
+            border-radius:20px;
+            background-color:rgba(246,231,170);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="TopImgAndSearchInput">
+            <div id="TopImgLeftSide">
+                <img id="TopImg" src="img1.png"/>
+            </div>
+            <div id="TopImgRightSide">
+                <div id="inputTag">
+                    <input id="inputOne" type="text">
+                    
+                </div>
+                <div id="glassImg">
+                    <img id="glassImgImg" src="glassimg.png"/>
+                </div>
+            </div>
+        </div>
+        <!--TopImgAndSearchInput-->
+
+        <div id="TopUnderDiv">
+            <div id="blackbox"></div>
+            <h5 style="margin-right:14%;">카테고리</h5>
+            <h5 style="margin-right:6%;">공지사항</h5>
+            <h5 style="margin-right:6%;">학습 가이드</h5>
+            <h5 style="margin-right:3%;">스터디</h5>
+        </div>
+        <!--TopUnderDiv-->
+
+        <div id="cate">
+            <h5>카테고리 선택</h5>
+        </div>
+        <!--cate-->
+        <div id="cates">
+            <ul class="inner-menu">
+                <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">JAVA</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">JavaScript</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">PHP</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">C++ / C#</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">Python</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Kotlin</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">SQL</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">R</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Swift</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">VisualBasic</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="#">|</a></li>
+                <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">기타</a></li>
+            </ul>
+        </div>
+        <!--cates-->
+        <div id="writeTitle">
+            <h5>글 작성하기</h5>
+        </div>
+        <!--writeTitle-->
+        <div id="writeBox">
+            <div id="title">
+                <h5>제목</h5>
+            </div>
+            <div id="inputUnderDiv">
+                <input id="inputUnderTitle" type="text"/>
+            </div>
+        </div>
+        <!--writeBox-->
+        <div id="buttons">
+            <input id="leftbtn" type="button" value="취소">
+            <input id="rightbtn" type="button" value="완료">
+        </div>
+    </div>
+</body>
+</html>
