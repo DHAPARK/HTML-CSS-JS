@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title> Order Page </title>
+<!--
+<link rel="stylesheet" type="text/css" href="style-size.css"/>
+<link rel="stylesheet" type="text/css" href="style-layout.css"/>
+<link rel="stylesheet" type="text/css" href="style-presentation.css"/>
+-->
+<style>
+    #odTb{
+        display:none;
+    }
+    #ptag{
+        margin-top:50px;
+    }
+
+</style>
+
+<!--<script type="text/javascript" src="script.js"></script>-->
+
+<script>
+    var valArr = [];
+    var nameArr = [];
+
+    function updateAll() {
+        var n1 = document.getElementById("book1").value;
+        var n2 = document.getElementById("book2").value;
+        var n3 = document.getElementById("book3").value;
+        var p1 = 27000 * n1;
+        var p2 = 21000 * n2;
+        var p3 = 28000 * n3;
+        document.getElementById("book1Total").value = p1;
+        document.getElementById("book2Total").value = p2;
+        document.getElementById("book3Total").value = p3;
+        var totalNumber = parseInt(n1) + parseInt(n2) +
+        parseInt(n3);
+        document.getElementById("totalNumber").value = totalNumber;
+        var totalPrice = p1 + p2 + p3;
+        document.getElementById("totalPrice").value = totalPrice;
+    }
+
+
+    function showOd(ele){
+        //윗동네 입력값부터 받아와야함
+        var eleParent = ele.parentNode;
+        var eleTbody = eleParent.children[1].children[0];
+        console.log(eleTbody);
+        //tbody 내부에 tr들
+        var eleTbodyArr = eleTbody.children;
+        var tblength = eleTbodyArr.length;
+        
+        for(var i=0; i<3; i++){
+        
+            nameArr[i] = eleTbodyArr[i+1].children[0].innerText;
+            valArr[i] = eleTbodyArr[i+1].children[2].children[0].value;
+        }
+        //윗동네 입력값부터 받아와야함
+        
+        
+        var odTbdiv = document.getElementById("odTb");
+        
+
+
+        
+        //테이블 자체 받아옴
+        var otDivTb = odTbdiv.children[1];
+        
+        var otDivTbody = otDivTb.children[0];
+        
+        
+        for(var i=0;i<3;i++){
+            
+            if(valArr[i] == 0){
+                otDivTbody.children[i+1].style.display = 'none';
+                
+                if(odTbdiv.style.display == 'none' || odTbdiv.style.display == ''){
+                    odTbdiv.style.display = 'block';    
+                }else{
+                    odTbdiv.style.display = 'none';
+                    odTbdiv.style.display = 'block';
+                }
+                
+            }else{
+
+                otDivTbody.children[i+1].style.display = 'block';
+                console.log('확실');
+                console.log(otDivTbody.children[i+1].children[1].children[0]);
+                otDivTbody.children[i+1].children[1].children[0].value = valArr[i];
+
+                if(odTbdiv.style.display == 'none' || odTbdiv.style.display == ''){
+                    odTbdiv.style.display = 'block';    
+                }else{
+                    odTbdiv.style.display = 'none';
+                    odTbdiv.style.display = 'block';
+                }
+
+            }
+
+        }
+    }
+
+
+    
+</script>
+
+</head>
+<body id="order">
+<div class="head"> 서적 주문 양식 </div>
+<form action="">
+    <p> 주문서 </p>
+    <table>
+        <tr> <th> 책 제목 </th> <th> 가격 </th> <th> 수량 </th> <th> 합계 </th> </tr>
+        <tr>
+            <td> 컴퓨터와 IT기술의 이해 [개정판-2판] </td> <td> 27,000원 </td>
+            <td> <input  id="book1" type="text" size= "2" value="0"/> </td>
+            <td> <input  id="book1Total" type="text" size= "6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 소셜미디어의 이해와 활용 <td> 21,000원 </td>
+            <td> <input id="book2" type="text" size= "2" value="0"/> </td>
+            <td> <input id="book2Total" type="text" size= "6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 비즈니스 정보 시스템 </td> <td> 28,000원 </td>
+            <td> <input id="book3" type="text" size= "2" value="0"/> </td>
+            <td> <input id="book3Total" type="text" size= "6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 합계 </td> <td> &nbsp; </td>
+            <td> <input id="totalNumber" type="text" size= "2" value="0"/> </td>
+            <td> <input id="totalPrice" type="text" size= "6" value="0"/> 원</td>
+        </tr>
+    </table> <br />
+    <input type="button" value="합계계산" onclick="updateAll()">
+    <input type="reset" value="초기화">
+    <input type="button" value="주문하기" onclick="showOd(this);">
+</form>
+
+<div id="odTb">
+    <p id="ptag">주문내역</p>
+    <table>
+        <tr> <th> 책 제목 </th> <th> 수량 </th>  </tr>
+        <tr>
+            <td> 컴퓨터와 IT기술의 이해 [개정판-2판] </td>
+            <td> <input  id="book1" type="text" size= "2" value="0"/> </td>
+        </tr>
+        <tr>
+            <td> 소셜미디어의 이해와 활용 </td> 
+            <td> <input id="book2" type="text" size= "2" value="0"/> </td>
+        </tr>
+        <tr>
+            <td> 비즈니스 정보 시스템 </td> 
+            <td> <input id="book3" type="text" size= "2" value="0"/> </td>
+        </tr>
+        
+    </table>
+</div>
+
+</body>
+</html>
